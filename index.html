@@ -31,16 +31,6 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
-      const url = window.location.href;
-     
-      function getParamFromUrl(url, param) {
-          const queryString = url.split('?')[1];
-          const urlParams = new URLSearchParams(queryString);
-          return urlParams.get(param);
-      }
-      var name = getParamFromUrl(url, 'name');
-      var id = getParamFromUrl(url, 'id');
-
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
