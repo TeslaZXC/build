@@ -66,8 +66,7 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           if(name != null && id != null){
-            unityInstance.SendMessage('TelegramConnect', 'EnterName', name);
-            unityInstance.SendMessage('TelegramConnect', 'EnterId', id);
+            unityInstance.SendMessage('EnterDataTg', 'EnterData', name, id);
           }
           loadingBar.style.display = "none";
         }).catch((message) => {
