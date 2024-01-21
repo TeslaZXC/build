@@ -30,16 +30,8 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
-
-      var currentUrl = window.location.href;
-      var values = {
-        name: 'example_name',
-        id: '12345'
-      };
-      var newUrl = currentUrl + '?name=' + values.name + '&id=' + values.id;
-      console.log(newUrl);
-
-      var url = 'http://localhost/?name=aryr&id=12345';
+      
+      var url = window.location.href;
 
       var paramsString = url.split('?')[1];
 
