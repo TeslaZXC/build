@@ -31,24 +31,12 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
       
-      var url = window.location.href;
-
-      var paramsString = url.split('?')[1];
-
-      var paramsArray = paramsString.split('&');
-
-      var params = {};
-      paramsArray.forEach(function(param) {
-        var keyValue = param.split('=');
-        params[keyValue[0]] = keyValue[1];
-      });
-
-      var name = params['name'];
-      var id = params['id'];
-
-      console.log('Name:', name);
-      console.log('ID:', id);
-
+      var url = 'https://teslazxc.github.io/build/?name=Артур&id=1998851668#tgShareScoreUrl=tg%3A%2F%2Fshare_game_score%3Fhash%3DFOWP6-YVaExUHZg-KICNAyb0rs6bzvdTj2oranZSeowBPZq-BCkNEDvQ82dBtnmJ';
+      
+      var urlParams = new URL(url);
+      var name = urlParams.searchParams.get('name');
+      var id = urlParams.searchParams.get('id');
+      Console.log(name+" " + id);
 
 
       // Shows a temporary message banner/ribbon for a few seconds, or
